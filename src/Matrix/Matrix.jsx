@@ -16,15 +16,13 @@ const Matrix = () => {
             setClickedIndexes([...clickedIndexes, index]);
         }
 
-        // If last box is clicked, change green blocks to orange one by one
         if (index === 8) {
             clickedIndexes.forEach((idx, i) => {
                 setTimeout(() => {
                     setOrangeIndexes((prev) => [...prev, idx]);
-                }, i * 500); // Delay for each block
+                }, i * 500);
             });
 
-            // Change the last box to orange after all previous ones
             setTimeout(() => {
                 setOrangeIndexes((prev) => [...prev, 8]);
             }, clickedIndexes.length * 500);

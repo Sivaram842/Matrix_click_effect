@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: repeat(3, 70px);
     gap: 15px;
-    /* Increased spacing between blocks */
     justify-content: center;
     margin-top: 20px;
 }
